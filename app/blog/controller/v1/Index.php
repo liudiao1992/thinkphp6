@@ -1,5 +1,10 @@
 <?php
-namespace app\controller;
+/*
+ * @author: liudiao
+ * @Date: 2023-07-25 14:37:57
+ * @Description: 
+ */
+namespace app\blog\controller;
 
 use app\BaseController;
 
