@@ -21,7 +21,7 @@ class Index extends BaseController
         return 'hello,' . $name;
     }
 
-    public function quque(){
+    public function queue(){
         $params = $this->request->get();
         $jobHandlerClassName = 'app\blog\job\Test'; 
         $jobQueueName = 'test';
