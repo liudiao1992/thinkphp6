@@ -8,5 +8,5 @@
 use think\facade\Route;
 
  Route::group(':version.index', function(){
-    Route::get('hello','h5/:version/index/hello')->name('blog_index_hello');
+    Route::get('hello','h5/:version.Index/hello')->name('blog_index_hello');
  });
