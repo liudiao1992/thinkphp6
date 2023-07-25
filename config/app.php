@@ -16,7 +16,7 @@ return [
     // 是否启用路由
     'with_route'       => true,
     // 默认应用
-    'default_app'      => 'blog',
+    'default_app'      => 'index',
 
     // 开启自动多模式
     'auto_multi_app' => true,

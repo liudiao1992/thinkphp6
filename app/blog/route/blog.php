@@ -5,8 +5,8 @@
  * @Description: blog 路由
  */
 
-use think\facade\Route;
+// use think\facade\Route;
 
- Route::group(':version.index', function(){
-    Route::get('hello','h5/:version.Index/hello')->name('blog_index_hello');
- });
+//  Route::group(':version.index', function(){
+//     Route::get('hello','h5/:version.Index/hello')->name('blog_index_hello');
+//  });
