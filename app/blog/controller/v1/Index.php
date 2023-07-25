@@ -7,6 +7,7 @@
 namespace app\blog\controller\v1;
 
 use app\BaseController;
+use think\facade\Queue;
 
 class Index extends BaseController
 {
@@ -18,5 +19,20 @@ class Index extends BaseController
     public function hello($name = 'ThinkPHP6')
     {
         return 'hello,' . $name;
+    }
+
+    public function quque(){
+        $params = $this->request->get();
+        $jobHandlerClassName = 'app\blog\job\Test'; 
+        $jobQueueName = 'test';
+        $orderData = ['a' => $params['a'], 'b' => $params['b']];
+        //Queue::push();//立即执行
+        $isPushed = Queue::later(10, $jobHandlerClassName, $orderData, $jobQueueName); //这儿的10是指10秒后执行队列任务
+        
+        if($isPushed !== false){
+            echo '队列添加成功';
+        }else{
+            echo '插入失败了';
+        }
     }
 }
