@@ -10,8 +10,12 @@
 // +----------------------------------------------------------------------
 use think\facade\Route;
 
-Route::get('think', function () {
-    return 'hello,ThinkPHP6!';
-});
-
 Route::get('hello/:name', 'index/hello');
+
+
+Route::group(':version',function(){
+    Route::group('index',function(){
+        Route::get('index','blog/v1/index/index');
+        Route::get('hello/:name','blog/v1/index/hello');
+    });
+});
