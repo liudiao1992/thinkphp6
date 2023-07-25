@@ -4,7 +4,7 @@
  * @Date: 2023-07-25 14:37:57
  * @Description: 
  */
-namespace app\blog\controller;
+namespace app\blog\controller\v1;
 
 use app\BaseController;
 
